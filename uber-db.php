@@ -18,6 +18,8 @@ class UberDb {
     private function connect() {
         $this->_mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
     }
+	
+	private function test() {}
 }
 
 ?>
