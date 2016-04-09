@@ -7,6 +7,8 @@ class UberDb {
     protected $user;
     protected $pass;
     protected $db;
+	
+	protected $debug = false;
 
     public function __construct($host = NULL, $user = NULL, $pass = NULL, $db = NULL) {
         $this->host = $host;
@@ -19,7 +21,9 @@ class UberDb {
         $this->_mysqli = new mysqli($this->host, $this->user, $this->pass, $this->db);
     }
 	
-	private function test() {}
+	private function test() {
+		$this->debug = true;
+	}
 }
 
 ?>
